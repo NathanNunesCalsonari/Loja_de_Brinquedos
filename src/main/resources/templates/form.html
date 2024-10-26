@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${titulo}">Formulário de Brinquedo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="form-container">
+    <h1 th:text="${titulo}">Formulário de Brinquedo</h1>
+    <form th:action="@{/brinquedos/salvar}" th:object="${brinquedo}" method="post">
+        <input type="hidden" th:field="*{id}" />
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" th:field="*{nome}" required/><br/>
+
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" th:field="*{tipo}" required/><br/>
+
+        <label for="classificacao">Classificação:</label>
+        <select id="classificacao" th:field="*{classificacao}" required>
+            <option value="" disabled selected>Selecione uma Classificação</option>
+            <option value="para_bebes">Para Bebês</option>
+            <option value="para_criancas">Para Crianças</option>
+            <option value="para_maiores_12">Para Maiores de 12 Anos</option>
+            <option value="para_maiores_18">Para Maiores de 18 Anos</option>
+            <option value="livre_para_todas_as_idades">Livre para todas as idades</option>
+        </select><br/>
+
+        <!-- Campo para selecionar o tamanho -->
+        <label for="tamanho">Tamanho:</label>
+        <select id="tamanho" th:field="*{tamanho}" required class="styled-select">
+            <option value="" disabled selected>Selecione um Tamanho</option>
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+        </select><br/>
+
+        <!-- Campo para o preço -->
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" th:field="*{preco}" required placeholder="Insira o preço"/><br/>
+
+        <!-- Campo para selecionar a empresa -->
+        <label for="empresaId">Empresa:</label>
+        <select id="empresaId" th:field="*{empresaId}" required class="styled-select">
+            <option value="" disabled selected>Selecione uma Empresa</option>
+            <option th:each="empresa : ${empresas}"
+                    th:value="${empresa.id}"
+                    th:text="${empresa.nome}"></option>
+        </select><br/>
+
+        <button type="submit">Salvar</button>
+    </form>
+    <br>
+    <a href="/brinquedos/listar" class="btn btn-cancel">Voltar para a Lista</a>
+</div>
+</body>
+</html>
