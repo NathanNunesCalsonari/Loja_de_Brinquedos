@@ -37,8 +37,6 @@ O uso de anotações de validação no BrinquedoDTO garante que os dados recebid
 
 ## Integrantes
 
-- Ana Paula Nascimento Silva (RM 552513) 
-- Calina Thalya Santana da Silva (RM 552523) 
 - Geovana Ribeiro D. Silva (RM 99646) 
 - Leonardo Camargo Lucena (RM 552537)
 - Nathan Nunes Calsonari (RM 552539) 
