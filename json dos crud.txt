@@ -1,0 +1,94 @@
+CREATE
+{
+    "nome": "Nome do Brinquedo",
+    "tipo": "Tipo do Brinquedo",
+    "classificacao": "para_criancas",
+    "tamanho": "medio",
+    "preco": 49.99,
+    "empresaId": 1
+}
+
+READ
+{
+    "id": 1,
+    "nome": "Nome do Brinquedo",
+    "tipo": "Tipo do Brinquedo",
+    "classificacao": "para_criancas",
+    "tamanho": "medio",
+    "preco": 49.99,
+    "empresaId": 1
+}
+
+UPDATE
+{
+    "id": 1,
+    "nome": "Nome Atualizado do Brinquedo",
+    "tipo": "Tipo Atualizado",
+    "classificacao": "para_maiores_12",
+    "tamanho": "grande",
+    "preco": 59.99,
+    "empresaId": 2
+}
+
+DELETE 
+{
+    "id": 1
+}
+
+
+CREATE EMPRESA 
+{
+    "nome": "Nome da Empresa",
+    "cnpj": "12.345.678/0001-99",
+    "endereco": "Endereço da Empresa",
+    "telefone": "(11) 98765-4321"
+}
+
+LER EMPRESA
+{
+    "id": 1,
+    "nome": "Nome da Empresa",
+    "cnpj": "12.345.678/0001-99",
+    "endereco": "Endereço da Empresa",
+    "telefone": "(11) 98765-4321"
+}
+
+UPDATE EMPRESA
+{
+    "id": 1,
+    "nome": "Nome Atualizado da Empresa",
+    "cnpj": "12.345.678/0001-00",
+    "endereco": "Novo Endereço da Empresa",
+    "telefone": "(11) 91234-5678"
+}
+
+DELETE EMPRESA
+{
+    "id": 1
+}
+
+CREATE
+{
+    "username": "novo_usuario",
+    "password": "senha_secreta"
+}
+
+READ
+{
+    "username": "usuario_existente",
+    "password": "senha_correta"
+}
+
+UPDATE
+{
+    "username": "usuario_existente",
+    "oldPassword": "senha_antiga",
+    "newPassword": "nova_senha"
+}
+
+DELETE
+{
+    "username": "usuario_a_deletar"
+}
+
+ 
